@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "settle": "rm -rf .git && echo 'Pick new name:' new_name && read new_name && npx react-native-rename $new_name && git init",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
