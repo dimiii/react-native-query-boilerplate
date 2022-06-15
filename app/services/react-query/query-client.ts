@@ -1,3 +1,3 @@
-import { QueryClient } from 'react-query';
+import { QueryClient } from "react-query"
 // Create a client
-export const RNQueryClient = new QueryClient();
+export const RNQueryClient = new QueryClient()

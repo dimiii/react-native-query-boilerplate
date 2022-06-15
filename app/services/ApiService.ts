@@ -1,24 +1,24 @@
-import axios, { AxiosRequestConfig } from 'axios';
-import { apiClient } from './client';
+import axios, { AxiosRequestConfig } from "axios"
+import { apiClient } from "./client"
 
 export class ApiService {
-  config?: AxiosRequestConfig = {};
+  config?: AxiosRequestConfig = {}
 
-  private cancellationToken = axios.CancelToken.source();
+  private cancellationToken = axios.CancelToken.source()
 
   static createInstance(): ApiService {
-    const activeInstance = new ApiService();
-    activeInstance.cancellationToken = axios.CancelToken.source();
-    activeInstance.config.cancelToken = activeInstance.cancellationToken.token;
-    return activeInstance;
+    const activeInstance = new ApiService()
+    activeInstance.cancellationToken = axios.CancelToken.source()
+    activeInstance.config.cancelToken = activeInstance.cancellationToken.token
+    return activeInstance
   }
 
   cancelRequests() {
-    this.cancellationToken.cancel('RequestCancellation');
-    return ApiService.createInstance();
+    this.cancellationToken.cancel("RequestCancellation")
+    return ApiService.createInstance()
   }
 
   getCharacters = () => {
-    return apiClient.get('/character');
-  };
+    return apiClient.get("/character")
+  }
 }

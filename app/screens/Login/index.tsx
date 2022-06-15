@@ -1,18 +1,18 @@
-import React from 'react';
-import { View } from 'react-native';
-import { Text, Button } from 'react-native-paper';
+import React from "react"
+import { View } from "react-native"
+import { Text, Button } from "react-native-paper"
 
-import styles from './styles';
-import NavigationService from 'app/navigation/NavigationService';
-import { useStore } from 'app/store';
+import styles from "./styles"
+import NavigationService from "app/navigation/NavigationService"
+import { useStore } from "app/store"
 
 const Login: React.FC = () => {
-  const setIsLoggedIn = useStore(state => state.setIsLoggedIn);
+  const setIsLoggedIn = useStore(state => state.setIsLoggedIn)
 
   const onLogin = () => {
-    setIsLoggedIn(true);
-  };
-  const onForgot = () => NavigationService.navigate('ForgotPassword');
+    setIsLoggedIn(true)
+  }
+  const onForgot = () => NavigationService.navigate("ForgotPassword")
   return (
     <View style={styles.container}>
       <View style={styles.container}>
@@ -29,7 +29,7 @@ const Login: React.FC = () => {
         </Button>
       </View>
     </View>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

@@ -1,17 +1,17 @@
-import React from 'react';
-import { View, FlatList, RefreshControl } from 'react-native';
-import { Appbar, Card, Paragraph } from 'react-native-paper';
-import { useStore } from 'app/store';
+import React from "react"
+import { View, FlatList, RefreshControl } from "react-native"
+import { Appbar, Card, Paragraph } from "react-native-paper"
+import { useStore } from "app/store"
 
-import styles from './styles';
-import { GetUserDetails } from 'app/services/react-query/queries/user';
+import styles from "./styles"
+import { GetUserDetails } from "app/services/react-query/queries/user"
 const Home: React.FC = () => {
-  const setIsLoggedIn = useStore(state => state.setIsLoggedIn);
-  const { isLoading, isFetching, data = { results: [] } } = GetUserDetails();
+  const setIsLoggedIn = useStore(state => state.setIsLoggedIn)
+  const { isLoading, isFetching, data = { results: [] } } = GetUserDetails()
 
   const onLogOut = () => {
-    setIsLoggedIn(false);
-  };
+    setIsLoggedIn(false)
+  }
 
   const renderItem = ({ item }) => (
     <Card style={styles.card} mode="elevated">
@@ -25,7 +25,7 @@ const Home: React.FC = () => {
         </View>
       </Card.Content>
     </Card>
-  );
+  )
 
   return (
     <View style={styles.container}>
@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         }
       />
     </View>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

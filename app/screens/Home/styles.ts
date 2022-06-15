@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
   container: {
@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   card: {
     margin: 4,
   },
-  content: { flexDirection: 'row', justifyContent: 'space-between' },
-});
+  content: { flexDirection: "row", justifyContent: "space-between" },
+})
 
-export default styles;
+export default styles
