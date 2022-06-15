@@ -13,6 +13,8 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.ios.js', '.android.js'],
         alias: {
           app: './app',
+          // '~assets': './assets',
+          // '^~((?!assets).+)': './src/\\1',
         },
       },
     ],
